@@ -332,27 +332,71 @@ h2 em {
 }
 
 .experience-item {
-  align-items: baseline;
+  align-items: start;
   border-top: 1px solid var(--rule);
   display: grid;
-  gap: 20px;
-  grid-template-columns: 0.3fr 1fr 0.7fr;
-  padding: 30px 0;
+  gap: clamp(28px, 7vw, 120px);
+  grid-template-columns: 0.32fr 1fr;
+  padding: 34px 0 42px;
 }
 
-.experience-item > span,
-.experience-item p {
+.experience-meta {
+  display: grid;
+  gap: 15px;
+}
+
+.experience-meta > span,
+.experience-meta a {
   color: var(--muted);
   font: 10px var(--mono);
   line-height: 1.55;
   margin: 0;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
-.experience-item h3 {
+.experience-meta a {
+  color: var(--ink);
+}
+
+.experience-meta a span {
+  font-size: 14px;
+  vertical-align: -1px;
+}
+
+.experience-content h3 {
   font-size: clamp(25px, 3vw, 43px);
   letter-spacing: 0;
   margin: 0;
+}
+
+.experience-points {
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+}
+
+.experience-points li {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  padding: 13px 0;
+}
+
+.experience-points li::before {
+  color: var(--coral);
+  content: "+";
+  display: inline-block;
+  font: 12px var(--mono);
+  margin-right: 10px;
+}
+
+.experience-points strong {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .work {
